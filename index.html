@@ -9,8 +9,14 @@
 </head>
 <body>
     <button id="settings-button">Settings</button>
-    <div>
-
+    <div id="settings" class="settings">
+      <form class="name-form" id="name-form" action="#">
+          <input type="text" class="name-input" id="name-input" placeholder="Your name here please...">
+          <button type="submit" class="name-button">Add</button>
+      </form>
+    </div>
+    <div class="greeting-container">
+         <h2 class="greet-user" id="greet-user"></h2>
     </div>
     <script src="js/main.js"></script>
 </body>
