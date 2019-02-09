@@ -18,14 +18,25 @@ if(userName == null ? userName = 'friend' : userName);
 // function(event) to save user input as user name and then store it to local storage by calling saveName() function.
 const changeName = () => {
      userName = document.getElementById('name-input').value;
-     userName.saveName();
+     saveName();
 };
 
-// adding an event listener to our form, telling it to prevent default setting
+const getGreeting = () => {
+    document.getElementById('greet-user').textContent = `Hey ${userName}, everyday is an opportunity to be extra. 
+    
+    Live your best life!`;
+};
+
+//event listener telling form to prevent default setting of clearing input field upon webpage refresh when user submits name
+// changeName called to save user name 
 document.getElementById('name-form').addEventListener('submit', (event) => {
     event.preventDefault();
-
+    changeName();
+    getGreeting();
 });
+
+
+
 
 
 
